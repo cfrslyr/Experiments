@@ -1,0 +1,41 @@
+dataset: Cifar10
+model: pseudo_mhsa_noein
+load_checkpoint_file: null
+no_cuda: false
+optimizer_learning_rate: 0.001
+optimizer_warmup_ratio: 0.05
+optimizer_betas: !!python/tuple
+- 0.9
+- 0.95
+optimizer_weight_decay: 0.001
+batch_size: 100
+num_epochs: 1600
+seed: 42
+encoder_model_dim: 256
+encoder_layers: 8
+decoder_model_dim: 96
+decoder_layers: 6
+droprate: 0.1
+num_heads: 8
+encoder_mlp_dim: 512
+decoder_mlp_dim: 384
+attn_droprate: 0
+mlp_droprate: 0.1
+encoder_hidden_dim: 256
+decoder_hidden_dim: 192
+encoder_inner_ref_config:
+- null
+- self
+decoder_inner_ref_config:
+- null
+- self
+encoder_outer_ref_config:
+- null
+- self
+decoder_outer_ref_config:
+- null
+- self
+only_list_parameters: false
+num_keep_checkpoints: 5
+plot_attention_positions: false
+output_dir: /home/carlin/finalwork/runs_pretrain/pseudo_mhsa_noein
